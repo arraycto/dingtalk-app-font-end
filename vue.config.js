@@ -16,6 +16,7 @@ module.exports = {
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',
   productionSourceMap: false,
+  filenameHashing: true,
 
   devServer: {
     disableHostCheck: true, // 解决 Invalid Host header
