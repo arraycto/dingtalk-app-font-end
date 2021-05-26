@@ -124,7 +124,9 @@ export default {
     },
     download() {
       const url = '/excel/ac_data?date=' + this.date
-      downloadFileByDingTalk(url, this.date.substr(0, 7) + '.xlsx')
+      downloadFileByDingTalk(url, this.date.substr(0, 7) + '.xlsx').catch(err => {
+        console.log(err)
+      })
       // downloadAcData(this.date).then(res => {
       //   if (this.date != null) {
       //     fileDownload(res.data, this.date.substr(0, 7) + '.xlsx')
